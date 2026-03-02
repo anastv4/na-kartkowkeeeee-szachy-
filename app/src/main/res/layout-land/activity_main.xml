@@ -12,13 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Button" />
+        android:text="Gracz 1" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="Button" />
+        android:text="Gracz 2" />
 
 </LinearLayout>

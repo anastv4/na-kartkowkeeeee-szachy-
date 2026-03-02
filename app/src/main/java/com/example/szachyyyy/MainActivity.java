@@ -2,6 +2,7 @@
 package com.example.szachyyyy;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -22,6 +23,23 @@ Gracz gracz1, gracz2;
         button2 = findViewById(R.id.button2);
         gracz1 = new Gracz(true,button1);
         gracz2 = new Gracz(true,button2);
-
+button1.setOnClickListener(
+        new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gracz1.odwrocAktywnosc();
+                gracz2.odwrocAktywnosc();
+            }
+        }
+);
+        button2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        gracz1.odwrocAktywnosc();
+                        gracz2.odwrocAktywnosc();
+                    }
+                }
+        );
     }
 }

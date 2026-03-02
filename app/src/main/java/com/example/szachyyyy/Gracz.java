@@ -14,7 +14,22 @@ public class Gracz {
         this.button = button;
         if(czyaktywny){
             uruchomZegar();
+        }else{
+            this.button.setClickable(false);
         }
+    }
+
+    public void odwrocAktywnosc(){
+        czyaktywny = !czyaktywny;
+        if(czyaktywny){
+            uruchomZegar();
+        }else{
+            zatrzymajZegar();
+        }
+        button.setClickable(czyaktywny);
+    }
+    private void zatrzymajZegar(){
+        countDownTimer.cancel();
     }
     private void uruchomZegar(){
         countDownTimer = new CountDownTimer(ileSekund*1000,1000) {
@@ -30,5 +45,6 @@ public class Gracz {
 
 
         };
+        countDownTimer.start();
     }
 }
